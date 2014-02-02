@@ -1,6 +1,6 @@
 AVRCC = /usr/bin/avr-gcc
-AVRCFLAGS_ATMEGA128 = -g -Wall -mmcu=atmega128 -Os -I./include/ -DF_CPU=16000000 -mcall-prologues
-AVRCFLAGS_ATMEGA2560 = -g -Wall -mmcu=atmega2560 -Os -I./include/ -DF_CPU=16000000 -mcall-prologues
+AVRCFLAGS_ATMEGA128 = -g -Wall -mmcu=atmega328p -Os -I./include/ -DF_CPU=20000000 -mcall-prologues
+AVRCFLAGS_ATMEGA2560 = -g -Wall -mmcu=atmega328p -Os -I./include/ -DF_CPU=20000000 -mcall-prologues
 AVROBJCOPY=avr-objcopy
 QHASM=../qhasm/qhasm-avr
 
@@ -24,7 +24,6 @@ test/test_nacl_atmega2560: obj/atmega2560/randombytes.o \
 	test/test_sc25519_mul.c \
 	test/test_ed25519.c \
 	test/test_poly1305.c \
-	test/test_salsa20.c \
 	test/test_sha512.c \
 	test/msgkey.c \
 	test/test_nacl.c \
@@ -45,7 +44,6 @@ test/speed_nacl_atmega2560: obj/atmega2560/randombytes.o \
 	test/speed_fe25519_mul.c \
 	test/speed_curve25519.c \
 	test/speed_ed25519.c \
-	test/speed_salsa20.c \
 	test/speed_poly1305.c \
 	test/speed_sha512.c \
 	test/msgkey.c \
@@ -60,7 +58,6 @@ test/stack_nacl_atmega2560: obj/atmega2560/randombytes.o \
 	test/stack_bigint_mul256.c \
 	test/stack_curve25519.c \
 	test/stack_ed25519.c \
-	test/stack_salsa20.c \
 	test/stack_poly1305.c \
 	test/stack_sha512.c \
 	test/msgkey.c \
@@ -166,4 +163,3 @@ clean:
 	-rm test/stack_nacl_atmega2560
 	-rm test/stack_nacl_atmega2560.hex
 	-rm obj/atmega2560/*
-
