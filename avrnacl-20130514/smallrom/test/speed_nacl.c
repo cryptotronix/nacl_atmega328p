@@ -16,7 +16,7 @@ extern void speed_bigint_mul256();
 extern void speed_fe25519_mul();
 extern void speed_curve25519();
 extern void speed_ed25519();
-//extern void speed_salsa20();
+extern void speed_salsa20();
 extern void speed_poly1305();
 extern void speed_sha512();
 
@@ -64,7 +64,7 @@ int main()
   speed_bigint_mul136();
   speed_bigint_mul256();
 //  speed_fe25519_mul();
-//  speed_salsa20();
+  speed_salsa20();
   speed_poly1305();
   speed_sha512();
   speed_curve25519();
@@ -73,3 +73,4 @@ int main()
   avr_end();
   return 0;
 }
+

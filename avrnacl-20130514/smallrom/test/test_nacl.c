@@ -25,39 +25,38 @@ extern void test_sha512();
 
 int main()
 {
-
-/*   test_bigint_mul136(); */
-/* //  print("222\n"); */
-/*   test_bigint_mul256(); */
-/* //  print("333\n"); */
-/*   test_fe25519_mul(); */
-/* //  print("444\n"); */
-/*   test_fe25519_freeze(); */
-/* //  print("555\n"); */
-/*   test_fe25519_add(); */
-/* //  print("666\n"); */
-/*   test_fe25519_sub(); */
-/* //  print("777\n"); */
-/*   test_fe25519_neg(); */
-/* //  print("888\n"); */
-/*   test_fe25519_invert(); */
-/* //  print("999\n"); */
-/*   test_sc25519_add(); */
-/* //  print("111\n"); */
-/*   test_sc25519_mul(); */
-/* //  print("222\n"); */
-
+//  print("111\n");
+  test_bigint_mul136();
+//  print("222\n");
+  test_bigint_mul256();
+//  print("333\n");
+  test_fe25519_mul();
+//  print("444\n");
+  test_fe25519_freeze();
+//  print("555\n");
+  test_fe25519_add();
+//  print("666\n");
+  test_fe25519_sub();
+//  print("777\n");
+  test_fe25519_neg();
+//  print("888\n");
+  test_fe25519_invert();
+//  print("999\n");
+  test_sc25519_add();
+//  print("111\n");
+  test_sc25519_mul();
+//  print("222\n");
   test_curve25519();
-
-/* //  print("333\n"); */
-/*   test_ed25519(); */
-/* //  print("444\n"); */
-/*   test_poly1305(); */
-/* //  print("555\n"); */
-/* //  test_salsa20(); */
-/* //  print("666\n"); */
-/*   test_sha512(); */
+//  print("333\n");
+  test_ed25519();
+//  print("444\n");
+  test_poly1305();
+//  print("555\n");
+  test_salsa20();
+//  print("666\n");
+  test_sha512();
 
   avr_end();
   return 0;
 }
+
